@@ -20,4 +20,8 @@ class EventTest < ActiveSupport::TestCase
   should validate_uniqueness_of(:location).scoped_to(:occurs_at)
     .with_message('An event has already been scheduled at that time')
     .case_insensitive
+
+  should have_many(:movies)
+  should have_many(:votes)
+
 end

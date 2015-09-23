@@ -8,4 +8,7 @@ class MovieTest < ActiveSupport::TestCase
 
   should validate_presence_of(:title)
   should validate_presence_of(:url)
+
+  should have_many(:votes)
+  should belong_to(:event)
 end

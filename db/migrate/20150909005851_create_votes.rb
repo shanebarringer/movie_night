@@ -1,9 +1,7 @@
 class CreateVotes < ActiveRecord::Migration
   def change
     create_table :votes do |t|
-      t.string :name
-      t.integer :movie
-      t.integer :event
+      t.string :person
 
       t.timestamps null: false
     end
